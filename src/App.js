@@ -1,4 +1,4 @@
-import { Navigate, createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Navigate, RouterProvider, createHashRouter } from 'react-router-dom';
 
 import { Homepage } from './pages/HomePage';
 // import { BlogPage, loader as BlogLoader } from './pages/BlogPage';
@@ -49,8 +49,76 @@ import { Provider } from 'react-redux';
     </Route>
   )
 ) */
-
+// Нужно использовать createBrowserRouter для создания
+/* 
 const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: < Layout />,
+      children: [
+        {
+          errorElement: <ErrorPAge />,
+          children: [
+            {
+              index: true,
+              element: <Homepage />,
+            },
+            {
+              path: 'posts',
+              element: <BlogPage />,
+              // loader: BlogLoader,
+            },
+            {
+              path: 'posts/new',
+              element: <RequireAuth> <CreatePost /> </RequireAuth>,
+              action: createPostAction,
+            },
+            {
+              path: 'posts/:id',
+              element: <Post />,
+              loader: PostLoader,
+            },
+            {
+              path: 'about/*',
+              element: < About />,
+            },
+            {
+              path: 'about2',
+              element: < About2 />,
+              children: [
+                {
+                  path: "contacts",
+                  element: <p>Our contact</p>,
+                },
+                {
+                  path: "teams",
+                  element: <p>Our teams</p>,
+                }
+              ],
+            },
+            {
+              path: 'about-us',
+              element: <Navigate to='/about' replace />,
+            },
+            {
+              path: 'login',
+              element: <LoginPage />,
+            },
+            {
+              path: '*',
+              element: < NotFoundPage />,
+            },
+          ],
+        }
+      ],
+    },
+  ]
+) */
+
+// Для работы в gh page
+
+const router = createHashRouter(
   [
     {
       path: '/',
