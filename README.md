@@ -6,18 +6,22 @@
 
 ## Для записка локально требуется
 
-### 1. Выполнить create react app в папке проекта
+### 1. Требутся клонировать репозитарий
 
-    npx create-react-app .
+	git clone https://github.com/vadyavadya/react-route-redux-posts.git
 
-### 2. Установить библиотеки
+### 2. Далее перейти в папку  
+	
+	cd react-route-redux-posts
 
-    npm install @reduxjs/toolkit react-redux react-router-dom
+### 3. Запустиь установку пакетов
 
-### 3. Вставить содержимое из папки src в src
+	npm i
 
-### 4. Выполнить `npm start`
-    npm start
+### 4. Послу установки запустить в режиме разработки
+
+	npm start
+
 ---
 #### Библиотека для публикации в github Pages
 
